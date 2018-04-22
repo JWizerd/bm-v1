@@ -12,7 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    echo 'Chello from Jeremiah';
+    echo 'Chello from Jeremiah Wodke';
 });
 
 $router->get('/about', function () use ($router) {
