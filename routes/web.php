@@ -11,10 +11,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    echo 'Chello from Jeremiah Wodke';
-});
-
-$router->get('/about', function () use ($router) {
-    echo "this is my about page and it works";
+$router->group(['middleware' => 'auth', 'prefix' => 'users'], function () use ($router) {
+    $router->get('/', 'UserController@index');
+    $router->post('/get', 'UsersController@get');
 });

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class ExampleController extends Controller
+use App\Http\User;
+
+class UserController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -12,5 +14,9 @@ class ExampleController extends Controller
     public function __construct()
     {
         //
+    }
+
+    public function index() {
+        echo 'auth working';
     }
 }
